@@ -61,7 +61,7 @@ function Carousel() {
           href={value.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white"
+          className="hover:text-white text-xs md:text-base"
         >
           {value.label}
         </a>
@@ -73,7 +73,7 @@ function Carousel() {
   // First has to check to see if there is data, then makes a check on the slide index against the current slide's pagination_id in order to render the correct information.
   // As the retrieved data is not in the same format for every slide, some checks are made to confirm the type of data that is present.
   // TODO: Add transition animation to the slides when they change.
-  // TODO: Fix render height on smaller mobile models (it appears that heights lower than 750px cause some rendering difficulties -> works fine on larger models and tablets).
+  // TODO: Fix render height on smaller mobile models, namely iPhone 5/SE (in chrome browser dev mode).
   // TODO: Fix position of some elements so that the user experience is better (mainly the anchors and the dots).
   // TODO: Split out into individual components to help with readability and reuseability.
   // TODO: Update some code to use hooks -> I'm looking at you dot nav!
@@ -89,7 +89,7 @@ function Carousel() {
                 setBackground(slide.theme) + ' fixed inset-0 bg-opacity-80'
               }
             >
-              <div className="flex justify-center items-center gap-4">
+              <div className="flex justify-center items-center gap-2 md:gap-4">
                 {renderAnchors()}
               </div>
               <div className="flex justify-center items-center">
@@ -105,7 +105,7 @@ function Carousel() {
                   >
                     {({ transform }) => (
                       <animated.button
-                        className="outline-none border-none w-4 h-4 bg-black rounded-full m-3 cursor-pointer"
+                        className="outline-none border-none w-2 md:w-4 h-2 md:h-4 bg-black rounded-full m-1 md:m-3 cursor-pointer"
                         style={{ transform }}
                         onClick={() => setCurrentSlideIndex(i)}
                       />
@@ -113,10 +113,10 @@ function Carousel() {
                   </Spring>
                 ))}
               </div>
-              <div className="flex justify-center items-center h-screen w-screen">
+              <div className="flex justify-center items-center h-auto md:h-screen w-auto md:w-screen">
                 <div className="rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8">
                   <div className="flex flex-col lg:flex-row">
-                    <div className="relative h-64 sm:h-80 w-full lg:h-auto lg:w-1/3 xl:w-2/5 flex-none">
+                    <div className="relative h-48 sm:h-80 w-full lg:h-auto lg:w-1/3 xl:w-2/5 flex-none">
                       {(slide.content?.image || slide.image) && (
                         <img
                           src={slide.content?.image?.url || slide.image.url}
@@ -139,23 +139,23 @@ function Carousel() {
                       <div className="p-8 bg-white">
                         <div className="flex justify-between items-start">
                           {(slide.content?.heading || slide.heading) && (
-                            <h3 className="text-xl font-bold mb-8">
+                            <h3 className="text-sm md:text-xl font-bold mb-4 md:mb-8">
                               {slide.content?.heading || slide.heading}
                             </h3>
                           )}
                         </div>
                         <div className="relative">
-                          <div className="h-48 overflow-y-auto">
+                          <div className="h-28 md:h-48 overflow-y-auto">
                             <div>
                               {(slide.content?.description ||
                                 slide.description) && (
-                                <p className="text-sm text-gray-500 line-clamp-3">
+                                <p className="text-xs md:text-sm text-gray-500 line-clamp-3">
                                   {slide.content?.description ||
                                     slide.description}
                                 </p>
                               )}
                               {slide.content?.groups ? (
-                                <select className="focus:border-gray-500 w-full md:w-60 rounded-md text-sm border-gray-300 mt-2">
+                                <select className="focus:border-gray-500 w-full md:w-60 rounded-md text-xs md:text-sm border-gray-300 mt-1 md:mt-2">
                                   {renderOptions(slide.content?.groups)}
                                 </select>
                               ) : null}
