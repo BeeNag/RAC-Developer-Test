@@ -74,6 +74,10 @@
               "label": "Audience Group 3"
             }
           ],
+          "image": {
+            "url": "https://placeimg.com/500/430/nature",
+            "alt": "alternative text"
+          },
           "next": {
             "label": "Next up - Top Moments"
           },
