@@ -29,13 +29,15 @@ function Carousel() {
   // Sets the background colour based on the slide theme
   const setBackground = (theme) => {
     if (theme === 0) {
-      return 'bg-gradient-to-r from-yellow-500 to-red-500'
+      return 'bg-gradient-to-r from-red-500 to-yellow-500'
     } else if (theme === 1) {
-      return 'bg-gradient-to-r from-red-500 to-blue-500'
+      return 'bg-gradient-to-r from-yellow-500 to-green-500'
     } else if (theme === 2) {
-      return 'bg-gradient-to-r from-blue-500 to-green-500'
+      return 'bg-gradient-to-r from-green-500 to-blue-500'
     } else if (theme === 3) {
-      return 'bg-gradient-to-r from-green-500'
+      return 'bg-gradient-to-r from-blue-500 to-pink-500'
+    } else if (theme === 4) {
+      return 'bg-gradient-to-r from-pink-500'
     } else {
       return ''
     }
