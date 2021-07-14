@@ -1,13 +1,27 @@
+@import-normalize; /* bring in normalize.css styles */
+
+@tailwind base;
+
+@tailwind components;
+
+/* Any custom component classes go here */
+
+@tailwind utilities;
+
+/* Any custom utilities go here */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@supports (font-variation-settings: normal) {
+  body {
+    margin: 0;
+    font-family: "InterVariable", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }

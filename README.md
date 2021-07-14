@@ -1,18 +1,42 @@
-# Getting Started with Create React App
+# Red Apple Creative Developer Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
 
-## Available Scripts
+This is my attempt at creating an interactive carousel, as outlined in the brief.\
+I have used `create-react-app` to quickly bootstrap a project and then added packages that I find useful.\
+Such as `prettier` for code formatting, `tailwindcss` for styling and `react-spring` for animations.\
+I made the conscious decision **not** to use `redux` in this instance, as in my opinion it isn't required at this stage (details can be found [here](https://redux.js.org/faq/general#when-should-i-use-redux)). The downside being that while the carousel does keep track of the state locally, if you refresh the page it will reset.\
+Tailwind was used for all the styling, and I haven't veered away from the default configuration that it provides because in this case it gives me what I need.\
+`craco` is used because `create-react-app` does not allow you to directly edit the postcss configuration. More information on `craco` can be found [here](https://github.com/gsoft-inc/craco).
 
-In the project directory, you can run:
+## Running the prototype
+
+Firstly, you should clone this repository:
+
+```bash
+$ git clone https://github.com/BeeNag/rac-developer-test.git
+```
+
+or
+
+```bash
+git clone git@github.com:BeeNag/rac-developer-test.git
+```
+
+In the root directory of the project, you should run:
+
+### `yarn start:server`
+
+Starts a lightweight json-server with the data provided in the **JSON file**.\
+Open [http://localhost:3001](http://localhost:3001) to view the json in the browser.
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode, and will automatically open a new tab in the default browser at [http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Other Available Scripts
+
+There are some other scripts that you can run provided by `create-react-app`, but aren't directly used by this prototype currently:
 
 ### `yarn test`
 
@@ -38,33 +62,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
