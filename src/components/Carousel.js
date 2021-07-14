@@ -44,6 +44,7 @@ function Carousel() {
   }
 
   // Renders the available options for a select input
+  // TODO: Capture selected option and store it
   const renderOptions = (groups) => {
     return groups.map((group) => {
       return (
