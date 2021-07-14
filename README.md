@@ -11,7 +11,7 @@ Tailwind was used for all the styling, and I haven't veered away from the defaul
 
 ## Running the prototype
 
-Firstly, you should clone this repository:\
+Firstly, you should clone this repository:
 
 ```bash
 $ git clone https://github.com/BeeNag/rac-developer-test.git
