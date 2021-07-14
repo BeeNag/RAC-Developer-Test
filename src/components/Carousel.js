@@ -2,10 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { config, Spring, animated } from 'react-spring'
 import axios from 'axios'
 
+// TODO: Consider removing all state into react-redux and managing it there (see readme for rationale for not using it currently).
+
 function Carousel() {
+  // State of data in the app
   const [data, setData] = useState({})
+  // Index of the current slide
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
+  // Fetch data from json-server and update the state
+  // TODO: Set loading flag while waiting for data to return from the server
+  // TODO: Show errors in loading in a popup or something similar
   useEffect(() => {
     const fetchContent = async () => {
       try {
@@ -19,6 +26,7 @@ function Carousel() {
     fetchContent()
   }, [])
 
+  // Sets the background colour based on the slide theme
   const setBackground = (theme) => {
     if (theme === 0) {
       return 'bg-gradient-to-r from-yellow-500 to-red-500'
@@ -33,6 +41,7 @@ function Carousel() {
     }
   }
 
+  // Renders the available options for a select input
   const renderOptions = (groups) => {
     return groups.map((group) => {
       return (
@@ -43,7 +52,8 @@ function Carousel() {
     })
   }
 
-  const renderFooter = () => {
+  // Renders the external links provided
+  const renderAnchors = () => {
     return Object.entries(data.footer).map(([key, value]) => {
       return (
         <a
@@ -59,6 +69,15 @@ function Carousel() {
     })
   }
 
+  // Renders the entire carousel element.
+  // First has to check to see if there is data, then makes a check on the slide index against the current slide's pagination_id in order to render the correct information.
+  // As the retrieved data is not in the same format for every slide, some checks are made to confirm the type of data that is present.
+  // TODO: Add transition animation to the slides when they change.
+  // TODO: Fix render height on smaller mobile models (it appears that heights lower than 750px cause some rendering difficulties -> works fine on larger models and tablets).
+  // TODO: Fix position of some elements so that the user experience is better (mainly the anchors and the dots).
+  // TODO: Split out into individual components to help with readability and reuseability.
+  // TODO: Update some code to use hooks -> I'm looking at you dot nav!
+  // TODO: Make use of the template value on each slide to grab a different slide template fro each slide (this ties into the component splitting as well).
   const displayCarousel = () => {
     if (Object.keys(data).length > 0) {
       return data.slides.map((slide) => {
@@ -71,7 +90,7 @@ function Carousel() {
               }
             >
               <div className="flex justify-center items-center gap-4">
-                {renderFooter()}
+                {renderAnchors()}
               </div>
               <div className="flex justify-center items-center">
                 {data.pagination.titles.map((item, i) => (
@@ -185,6 +204,7 @@ function Carousel() {
     }
   }
 
+  // Calls function that renders carousel component
   return <>{displayCarousel()}</>
 }
 
