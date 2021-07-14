@@ -1,0 +1,133 @@
+{
+    "content": {
+        "territory": "uk",
+        "language_code": "en_GB",
+        "pagination": {
+            "titles": [
+                "Welcome",
+                "Your Audience",
+                "Insights",
+                "Inspiration",
+                "Next Steps"
+            ]
+        },
+        "slides": [
+            {
+                "id": 1,
+                "slug": "welcome",
+                "pagination_id": 0,
+                "template": "ImageRightLockup",
+                "theme": 0,
+                "content": {
+                    "heading": "Welcome!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                    "image": {
+                        "url": "https://placeimg.com/500/430/nature",
+                        "alt": "alternative text"
+                    },
+                    "next": {
+                        "label": "Next up - About you"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "slug": "about-you",
+                "pagination_id": 0,
+                "theme": 0,
+                "template": "ImageLeftLockup",
+                "content": {
+                    "heading": "Welcome!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                    "image": {
+                        "url": "https://placeimg.com/500/430/nature",
+                        "alt": "alternative text"
+                    },
+                    "next": {
+                        "label": "Next up - Audience"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "slug": "audience",
+                "pagination_id": 1,
+                "theme": 1,
+                "template": "MultiSelect",
+                "content": {
+                    "heading": "Which group best represents your audience",
+                    "description": "Please select only one",
+                    "groups": [
+                        {
+                            "id": 1,
+                            "label": "Audience Group 1"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Audience Group 2"
+                        },
+                        {
+                            "id": 3,
+                            "label": "Audience Group 3"
+                        }
+                    ],
+                    "next": {
+                        "label": "Next up - Top Moments"
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "slug": "top-moment",
+                "pagination_id": 2,
+                "theme": 2,
+                "heading": "Top moments",
+                "group_name": "You",
+                "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+                "image": {
+                    "url": "https://placeimg.com/500/430/nature",
+                    "alt": "alternative text"
+                },
+                "back": {
+                  "label": "Back"
+                },
+                "next": {
+                    "label": "Next up - Inspiration"
+                    }
+                },
+            {
+                "id": 5,
+                "slug": "inspiration",
+                "pagination_id": 3,
+                "theme": 3,
+                "heading": "Be Inspired",
+                "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+                "image": {
+                    "url": "https://placeimg.com/500/430/nature",
+                    "alt": "alternative text"
+                },
+                "back": {
+                    "label": "Back to - top moments"
+                },
+                "next": {
+                    "label": ""
+                }
+            }
+
+        ],
+        "footer": {
+            "legal": {
+                "label": "Legal",
+                "url": "https://www.google.com"
+            },
+            "privacy": {
+                "label": "Privacy",
+                "url": "https://www.google.com"
+            },
+            "cookies": {
+                "label": "Cookies",
+                "url": "https://www.google.com"
+            }
+        }
+    }
+}
