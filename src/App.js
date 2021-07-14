@@ -1,9 +1,11 @@
+import Carousel from './components/Carousel'
+
 function App() {
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <>
+      <Carousel />
+    </>
+  )
 }
 
-export default App;
+export default App
