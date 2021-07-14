@@ -11,6 +11,18 @@ Tailwind was used for all the styling, and I haven't veered away from the defaul
 
 ## Running the prototype
 
+Firstly, you should clone this repository:\
+
+```bash
+$ git clone https://github.com/BeeNag/rac-developer-test.git
+```
+
+or
+
+```bash
+git clone git@github.com:BeeNag/rac-developer-test.git
+```
+
 In the root directory of the project, you should run:
 
 ### `yarn start:server`
