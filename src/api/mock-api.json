@@ -34,7 +34,7 @@
         "id": 2,
         "slug": "about-you",
         "pagination_id": 1,
-        "theme": 0,
+        "theme": 1,
         "template": "ImageLeftLockup",
         "content": {
           "heading": "About you",
@@ -55,7 +55,7 @@
         "id": 3,
         "slug": "audience",
         "pagination_id": 2,
-        "theme": 1,
+        "theme": 2,
         "template": "MultiSelect",
         "content": {
           "heading": "Which group best represents your audience",
@@ -90,7 +90,7 @@
         "id": 4,
         "slug": "top-moment",
         "pagination_id": 3,
-        "theme": 2,
+        "theme": 3,
         "heading": "Top moments",
         "group_name": "You",
         "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
@@ -109,7 +109,7 @@
         "id": 5,
         "slug": "inspiration",
         "pagination_id": 4,
-        "theme": 3,
+        "theme": 4,
         "heading": "Be Inspired",
         "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
         "image": {
