@@ -28,7 +28,7 @@ In the root directory of the project, you should run:
 ### `yarn start:server`
 
 Starts a lightweight json-server with the data provided in the **JSON file**.\
-Open [http://localhost:3001](http://localhost:3001) to view the json in the browser.
+Open [http://localhost:3001/content](http://localhost:3001/content) to view the data returned by the api endpoint.
 
 ### `yarn start`
 
