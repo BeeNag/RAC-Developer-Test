@@ -23,12 +23,14 @@ or
 git clone git@github.com:BeeNag/rac-developer-test.git
 ```
 
-In the root directory of the project, you should run:
+In the root directory of the project, you should first run in the terminal:
 
 ### `yarn start:server`
 
 Starts a lightweight json-server with the data provided in the **JSON file**.\
 Open [http://localhost:3001/content](http://localhost:3001/content) to view the data returned by the api endpoint.
+
+Then open in tab in the terminal, and run:
 
 ### `yarn start`
 
