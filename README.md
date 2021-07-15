@@ -30,7 +30,7 @@ In the root directory of the project, you should first run in the terminal:
 Starts a lightweight json-server with the data provided in the **JSON file**.\
 Open [http://localhost:3001/content](http://localhost:3001/content) to view the data returned by the api endpoint.
 
-Then open in tab in the terminal, and run:
+Then open a new tab in the same terminal session, and run:
 
 ### `yarn start`
 
