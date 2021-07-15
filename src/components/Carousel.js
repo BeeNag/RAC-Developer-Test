@@ -3,6 +3,7 @@ import { config, Spring, animated } from 'react-spring'
 import axios from 'axios'
 
 // TODO: Consider removing all state into react-redux and managing it there (see readme for rationale for not using it currently).
+// TODO: Write tests for carousel component
 
 function Carousel() {
   // State of data in the app
